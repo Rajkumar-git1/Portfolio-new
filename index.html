@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
+    </nav>
+  </header>
+
+  <!-- Hero / About Section -->
+  <section class="hero" id="about">
+    <h1>Hello, I'm <span class="highlight">Rajkumar</span></h1>
+    <p>B.Tech student with a strong foundation in Android development and a passion for building practical applications. Skilled in Java, Swing, MySQL, Android Studio, and web technologies like HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <div class="skill-name"><i class="fas fa-code"></i> C Programming</div>
+        <div class="skill-bar"><div class="skill-fill" data-skill="80"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name"><i class="fab fa-java"></i> Java</div>
+        <div class="skill-bar"><div class="skill-fill" data-skill="85"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name"><i class="fab fa-python"></i> Python (Beginner)</div>
+        <div class="skill-bar"><div class="skill-fill" data-skill="60"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name"><i class="fab fa-html5"></i> HTML & CSS</div>
+        <div class="skill-bar"><div class="skill-fill" data-skill="90"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name"><i class="fas fa-file-word"></i> MS Office</div>
+        <div class="skill-bar"><div class="skill-fill" data-skill="75"></div></div>
+      </div>
+      <div class="skill">
+        <div class="skill-name"><i class="fas fa-database"></i> MySQL</div>
+        <div class="skill-bar"><div class="skill-fill" data-skill="80"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="edu-item">
+        <h3>Bachelor of Technology (B.Tech) in Computer Science</h3>
+        <p><strong>United University, Prayagraj</strong> | 2023 - Present</p>
+      </div>
+      <div class="edu-item">
+        <h3>Higher Secondary (Class 12)</h3>
+        <p><strong>G.R. Academy, Khalilabad</strong> | 2023</p>
+      </div>
+      <div class="edu-item">
+        <h3>Secondary (Class 10)</h3>
+        <p><strong>G.R. Academy, Khalilabad</strong> | 2021</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="certification">
+        <h3>Android Development - CodeSoft (2025)</h3>
+      </div>
+      <div class="certification">
+        <h3>Database (MySQL) – Udemy (2025)</h3>
+      </div>
+      <div class="certification">
+        <h3>Web Development - Prodigy InfoTech</h3>
+      </div>
+      <div class="certification">
+        <h3>Data Analytics - LearnoTube (2024)</h3>
+      </div>
+      <div class="certification">
+        <h3>Python Programming - Udemy</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project" data-modal="hospital">
+        <h3>Hospital Management System – Java, Swing, MySQL</h3>
+        <p>Created a desktop-based application to manage patient records, doctor details, and appointments. Implemented database connectivity for storing and retrieving hospital data. Enhanced problem-solving skills through object-oriented programming.</p>
+        <button class="view-details-btn">View Details</button>
+      </div>
+      <div class="project" data-modal="android">
+        <h3>Basic Project of Android Development Using Java, XML, Android Studio</h3>
+        <p>Developed a basic Android application with features like user login, navigation, and simple data storage. Learned the fundamentals of mobile app development and UI design.</p>
+        <button class="view-details-btn">View Details</button>
+      </div>
+      <div class="project" data-modal="web">
+        <h3>Some Projects About Web Development</h3>
+        <p>Built projects including an alarm clock, calculator, and personal portfolio website, showcasing creativity and problem-solving skills.</p>
+        <button class="view-details-btn">View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals for Project Details -->
+  <div id="hospital-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Hospital Management System</h2>
+      <p><strong>Technologies:</strong> Java, Swing, MySQL</p>
+      <p><strong>Description:</strong> A comprehensive desktop application for managing hospital operations. Features include patient registration, doctor scheduling, appointment booking, and data retrieval from MySQL database.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>User-friendly GUI with Swing components</li>
+        <li>MySQL database integration</li>
+        <li>CRUD operations for patients and doctors</li>
+        <li>Appointment management system</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="android-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Android Development Project</h2>
+      <p><strong>Technologies:</strong> Java, XML, Android Studio</p>
+      <p><strong>Description:</strong> A basic Android application demonstrating core mobile development concepts.</p>
+      <p><strong>Key Features:</strong></p>
+      <ul>
+        <li>User authentication and login</li>
+        <li>Navigation between activities</li>
+        <li>Data storage using SharedPreferences</li>
+        <li>Responsive UI design</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="web-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Web Development Projects</h2>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+      <p><strong>Description:</strong> Collection of interactive web projects showcasing front-end development skills.</p>
+      <p><strong>Projects:</strong></p>
+      <ul>
+        <li>Alarm Clock: Functional clock with alarm setting</li>
+        <li>Calculator: Basic arithmetic calculator</li>
+        <li>Portfolio Website: Personal showcase site</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"An exceptional developer with a keen eye for detail and innovative solutions."</p>
+        <cite>- John Doe, Tech Lead at XYZ Corp</cite>
+      </div>
+      <div class="testimonial">
+        <p>"Delivered high-quality code on time and exceeded expectations."</p>
+        <cite>- Jane Smith, Project Manager at ABC Inc</cite>
+      </div>
+      <div class="testimonial">
+        <p>"Great teamwork and problem-solving skills. Highly recommend!"</p>
+        <cite>- Mike Johnson, CEO at Startup DEF</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="formStatus"></p>
+
+      <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="mailto:rajsahani05955@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+    </div>
+    <a href="#" class="btn resume-btn">Download Resume</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Rajkumar. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
